@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TShirtOderingApp.MainPage" BackgroundImageSource="Ang.jpg">
+
+    <StackLayout>
+        <Label Text="Tee'D Up" TextColor="Azure" FontSize="Header" 
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" HeightRequest="600"/>
+        <ScrollView>
+            <StackLayout Padding="60" Spacing="5" HeightRequest="90000">
+                <Label Text="Full Names" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry Text="{Binding Name}" FontSize="Small"/>
+
+                <Label Text="Gender" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry Text="{Binding Gender}" FontSize="Small"/>
+
+                <Label Text="Date of order" FontSize="Medium" FontAttributes="Bold"/>
+                <DatePicker Format="D" Date="{Binding Date}"/>
+
+                <Label Text="T-Shirt color" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry Text="{Binding Color}" FontSize="Small"/>
+
+                <Label Text="Shipping address" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry Text="{Binding Address}" FontSize="Small"/>
+
+                <Label Text="Size" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry Text="{Binding Size}" FontSize="Small"/>
+
+                <Button Text="Save" Clicked="Button_Save" CornerRadius="20"/>
+                <Button Text="Delete" Clicked="Button_Delete" CornerRadius="20"/>
+                <Button Text="Cancel" Clicked="Button_Cancel" CornerRadius="20"/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

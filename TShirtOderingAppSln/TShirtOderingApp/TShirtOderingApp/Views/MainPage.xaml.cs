@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TShirtOderingApp.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TShirtOderingApp
@@ -26,9 +28,41 @@ namespace TShirtOderingApp
 
         private async void Button_Save(object sender, EventArgs e)
         {
+            
+
             var tees = (Tees)BindingContext;
+
+
+
+
+
+
+
+            var location = tees.Address;
+            var myadd = "bellville cape town";
+            var locate = await Geocoding.GetLocationsAsync(myadd);
+            var finalLocate = locate?.FirstOrDefault();
+
+
+            var addPos = string.Empty;
+
+            if (finalLocate != null)
+            {
+                addPos = $"Latitude: {finalLocate.Latitude}, Longitude: {finalLocate.Longitude}";
+            }
+
+
+            tees.AddressPosition = addPos;
+
+
+
+
+
+
+
+
             await App.Database.SaveItemAsync(tees);
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new TeeListPage());
         }
 
         private async void Button_Delete(object sender, EventArgs e)
@@ -36,6 +70,7 @@ namespace TShirtOderingApp
             var tees = (Tees)BindingContext;
             await App.Database.DeleteItemAsync(tees);
             await Navigation.PopAsync();
+
         }
 
         private async void Button_Cancel(object sender, EventArgs e)

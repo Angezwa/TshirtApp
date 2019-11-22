@@ -14,13 +14,51 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected" ItemsSource="{Binding TeesOrders}">
+
+    <ListView ItemsSource="{Binding Tees}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                        <Image Source="XXX.png" HorizontalOptions="End" IsVisible="{Binding Done}"/>
+                    <StackLayout>
+
+                        <FlexLayout Margin="0,0,0,10">
+                        <StackLayout Orientation="Horizontal">
+                                <Image Source="tshirt_logo.png" Margin="15,0,20,0" WidthRequest="50"/>
+
+                                <StackLayout>
+                                    <FlexLayout>
+                                        <Label Text="Name: " FontAttributes="Bold"/>
+                                        <Label Text="{Binding Name}"/>
+                                    </FlexLayout>
+                                    <FlexLayout>
+                                        <Label Text="Gender: " FontAttributes="Bold"/>
+                                        <Label Text="{Binding Gender}"/>
+                                    </FlexLayout>
+                                    <FlexLayout>
+                                        <Label Text="Size: " FontAttributes="Bold"/>
+                                        <Label Text="{Binding Size}"/>
+                                    </FlexLayout>
+                                    <FlexLayout>
+                                        <Label Text="Color: " FontAttributes="Bold"/>
+                                        <Label Text="{Binding Color}"/>
+                                    </FlexLayout>
+                                    <FlexLayout>
+                                        <Label Text="Address: " FontAttributes="Bold"/>
+                                        <Label x:Name="address" Text="{Binding Address}"/>
+                                    </FlexLayout>
+                                </StackLayout>
+                           
+                        </StackLayout>
+                    </FlexLayout>
+                        <FlexLayout>
+                            <StackLayout>
+                                <Label Text="{Binding AddressPosition}" />
+                            </StackLayout>
+                        </FlexLayout>
+                    <FlexLayout>
+                        <Button Text="Submit Order" Clicked="Button_Clicked_1"/>
+                            <Button Text=" Order map" Clicked="Button_Clicked"/>
+                        </FlexLayout>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

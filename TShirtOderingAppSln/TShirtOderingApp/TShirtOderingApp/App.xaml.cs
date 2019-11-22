@@ -16,7 +16,7 @@ namespace TShirtOderingApp
             get
             {
                 if (teesDatabase == null)
-                    teesDatabase = new TeesDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"TShirt.db3" ));
+                    teesDatabase = new TeesDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"TShirts.db3" ));
 
                 return teesDatabase;
 

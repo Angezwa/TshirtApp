@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TShirtOderingApp.MainPage" BackgroundImageSource="Ang.jpg">
+             x:Class="TShirtOderingApp.MainPage" BackgroundImageSource="Ondela.jpg">
 
     <StackLayout>
         <Label Text="Tee'D Up" TextColor="Azure" FontSize="Header" 

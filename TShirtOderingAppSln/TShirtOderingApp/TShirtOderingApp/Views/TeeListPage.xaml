@@ -4,14 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TShirtOderingApp.Views.TeeListPage">
+             x:Class="TShirtOderingApp.Views.TeeListPage" BackgroundImageSource="Ondela.jpg">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="OnItemAdded">
-            <ToolbarItem.IconImageSource>
+        <ToolbarItem Text="Place New Order" Clicked="OnItemAdded">
+            <!--<ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="ImageSource">
-                    <On Platform="Android, UWP" Value="plus.png" />
+                    <On Platform="Android, UWP" Value="plus.png"/>
                 </OnPlatform>
-            </ToolbarItem.IconImageSource>
+            </ToolbarItem.IconImageSource>-->
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 

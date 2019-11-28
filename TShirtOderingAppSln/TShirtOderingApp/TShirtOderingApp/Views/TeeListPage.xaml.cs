@@ -106,9 +106,6 @@ namespace TShirtOderingApp.Views
             }
 
 
-
-
-
             var location = new Xamarin.Essentials.Location(45.345535, -156.777399);
             var options = new MapLaunchOptions { Name = "Angezwa" };
 

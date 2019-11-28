@@ -7,7 +7,7 @@ namespace TShirtOderingApp
 {
    public class Tees
     {
-        internal bool status;
+        
 
         [PrimaryKey, AutoIncrement] //to add multiple detailes for different people, and show below info on the table (sqlite)[using sqlite]
         public int ID { get; internal set; }

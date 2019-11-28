@@ -32,12 +32,6 @@ namespace TShirtOderingApp
 
             var tees = (Tees)BindingContext;
 
-
-
-
-
-
-
             var location = tees.Address;
             var myadd = "bellville cape town";
             var locate = await Geocoding.GetLocationsAsync(myadd);
@@ -53,13 +47,6 @@ namespace TShirtOderingApp
 
 
             tees.AddressPosition = addPos;
-
-
-
-
-
-
-
 
             await App.Database.SaveItemAsync(tees);
             await Navigation.PushAsync(new TeeListPage());

@@ -28,12 +28,14 @@ namespace TShirtOderingApp
         {
             InitializeComponent();
 
+            var mainPage = new MainPage();
+
             //Resources.Add("primaryGreen", Color.FromHex("91CA47"));
             //Resources.Add("primaryDarkGreen", Color.FromHex("6FA22E"));
 
             var nav = new NavigationPage(new TeeListPage());
             //nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
-            nav.BarTextColor = Color.White;
+           // nav.BarTextColor = Color.White;
 
             MainPage = nav;
         }
